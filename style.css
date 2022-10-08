@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
+
+/* ////////////////////// UNIVERSAL MODS ////////////////////// */
 
 * {
     margin: 0;
@@ -10,41 +13,22 @@
 
 body {
     background-color: #222831;
-    background-size:cover;
-    background-repeat: no-repeat;
     height: 100vh;
     overflow-x: hidden;
 }
 
-header.nav {
-    width: 100%;
-    height: 200px;
-}
+/* ////////////////////// NAVIGATION  ////////////////////// */
 
-.nav-main {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
+
 
 .nav {
+    width: 100%;
     position: relative;
-    height: 15em;
+    height: 200px;
     font-family: 'Lemon';
     background-color: #fff;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: 65% 50%;
 }
 
-.nav ul {
-    position: relative;
-    color: gray;
-    padding-top: 1.5em;
-    font-size: 1em;
-    top: 1.5em;
-}
 
 .nav ul li:hover {
     -moz-transform: scale(-1, -1);
@@ -67,12 +51,17 @@ header.nav {
 
 
 .list {
-    padding-top: 1em;
+    position: relative;
+    font-size: 1em;
+    top: 2.5em;
+    max-width: 350px;
+    max-height: 25px;
+    color: gray;
     display: flex;
     justify-content: center;
+    margin: 0 auto;
     gap: 2em;
     list-style: none;
-    max-width: 100%px;
     
 }
 
@@ -80,77 +69,138 @@ header.nav {
     cursor: pointer;
 }
 
-span {
-    /* color: #B1F6E3; */
-}
 
-li {
+li p {
+    position: relative;
+    color: #d3d3d3;
     text-align: center;
+    margin-bottom: 2em;
 }
 
-.tumb {
-    color: aliceblue;
-    margin-bottom: 2.5em;
+.srch {
+    position: relative;
+    float: right;
+    right: 5em;
 }
+
+.srch input {
+    padding: 6px;
+    width: 250px;
+    border: 1px solid lightgray;
+}
+
+.srch input:focus {
+    outline: none;
+}
+
+.srch i {
+    position: relative;
+    top: 5px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.material-symbols-outlined  {
+    padding-left: 5px;
+    font-size: 24px;
+}
+
+/* ////////////////////// PRODUCT-GRID ////////////////////// */
+
+.hero {
+    max-width: 100%;
+}
+
+
+.grid {
+    justify-content: center;
+    margin-top: 5em;
+    margin-bottom: 22em;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20em;
+    padding-left: 4em;
+    padding-right: 6em;
+    list-style: none;
+    font-family: 'Lemon';
+    max-height: 300em;
+    max-width: 400em;
+}
+
+
 .shop-item {
-    margin: 0 auto;
+    width: 24.6em;
+    height: 38em;
+    padding-top: 25px;
 }
 
 img {
-   transition: .2s;
-   z-index: 1;
-}
+    transition: .2s;
+    z-index: 1;
+ }
+ 
+ img:hover {
+     transform: scale(1.05);
+     cursor: pointer; 
+ }
 
-img:hover {
-    transform: scale(1.05);
-    cursor: pointer; 
-}
-
-.hero {
-    width: 75%;
-    margin: 0 auto;
-}
-
-.grid {
-    position: relative;
-    justify-content: center;
-    width: 90%;
-    margin-top: 5em;
-    margin-bottom: 20em;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 20%;
-    list-style: none;
-    font-family: 'Lemon';
-}
-
-p {
+h3 {
+    text-align: center;
     margin-top: 2em;
-    color: #000;
+    color: #d3d3d3;
+    font-weight: 700;
 }
 
 .btn {
+    position: relative;
+    left: 9em;
     margin-top: 2em;
     width: 7em;
     height: 3em;
-    font-weight: 300;
-
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: .2s;
+    font-weight: 700;
+    font-family: 'Roboto Condensed';
+    font-size: 1em;
 }
 
 .btn:hover {
     cursor: pointer;
+    background-color: orchid;
+    font-weight: 700;
+    color: #fff;
 }
+
+
+
+
+/*//////////////////////// FOOTER  //////////////////////*/
+
+
 
 footer {
     position: relative;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    display: flex;
+    justify-content: center;
     text-align: center;
     background-color: #fff;
-    height: 8em;
-    padding: 2em;
+    min-height: 200px;
+    max-width: 100%;
 }
+
+.foot {
+    position: relative;
+    width: 250px;
+    text-align: center;
+    top: 5.5em;
+    height: 25px;
+    font-family: 'Roboto Condensed';
+    font-weight: 400;
+    }
+
+
 
 /*//////////////////////// mobile breakpoint //////////////////////*/
 
@@ -181,5 +231,9 @@ img {
 img:hover {
     transform: none;
 }
+
+footer p {
+    position: relative;
+    bottom: 1em;
 
 }
