@@ -43,7 +43,7 @@ body {
     margin: 0 auto;
     top: .2em;
     font-family: 'Lemon';
-    color: #000;
+    color: #F75F1C;
     font-size: 5em;
     cursor: pointer;
     max-width: 185px;
@@ -56,13 +56,13 @@ body {
     top: 2.5em;
     max-width: 350px;
     max-height: 25px;
-    color: gray;
+    color: #881EE4;
     display: flex;
     justify-content: center;
     margin: 0 auto;
     gap: 2em;
     list-style: none;
-    
+    letter-spacing: 3px;
 }
 
 .list:hover {
