@@ -20,13 +20,13 @@ body {
 /* ////////////////////// NAVIGATION  ////////////////////// */
 
 
-
 .nav {
     width: 100%;
+    margin: 0 auto;
     position: relative;
-    height: 200px;
+    height: 116px;
     font-family: 'Lemon';
-    background-color: #fff;
+    background-color: #85E21F ;
 }
 
 
@@ -44,16 +44,16 @@ body {
     top: .2em;
     font-family: 'Lemon';
     color: #F75F1C;
-    font-size: 5em;
+    font-size: 2.5em;
     cursor: pointer;
-    max-width: 185px;
+    max-width: 120px;
 }
 
 
 .list {
     position: relative;
-    font-size: 1em;
-    top: 2.5em;
+    font-size: .9em;
+    top: 1.5em;
     max-width: 350px;
     max-height: 25px;
     color: #881EE4;
@@ -81,6 +81,7 @@ li p {
     position: relative;
     float: right;
     right: 5em;
+    bottom: .5em;
 }
 
 .srch input {
@@ -97,41 +98,43 @@ li p {
     position: relative;
     top: 5px;
     font-size: 24px;
+    transition: .3s;
+}
+
+.srch i:hover {
+    color: #d3d3d3;
+    background-color: #222831;
+    border-radius: 5px;
+}
+
+.srch-btn {
+    border: none;
+    background-color: transparent;
     cursor: pointer;
 }
 
-.material-symbols-outlined  {
-    padding-left: 5px;
-    font-size: 24px;
-}
+
 
 /* ////////////////////// PRODUCT-GRID ////////////////////// */
-
-.hero {
-    max-width: 100%;
-}
 
 
 .grid {
     justify-content: center;
     margin-top: 5em;
-    margin-bottom: 22em;
+    margin-bottom: 5em;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20em;
+    padding-top: 25px;
     padding-left: 4em;
     padding-right: 6em;
     list-style: none;
-    font-family: 'Lemon';
     max-height: 300em;
     max-width: 400em;
 }
 
-
 .shop-item {
-    width: 24.6em;
-    height: 38em;
-    padding-top: 25px;
+    min-width: 20em;
 }
 
 img {
@@ -144,31 +147,40 @@ img {
      cursor: pointer; 
  }
 
-h3 {
+.grid-item-title {
+    padding-top: 1em;
+    font-size: calc(var12px*1.22);
+}
+ 
+.item-price {
+    position: relative;
+    bottom: 1.5em;
     text-align: center;
-    margin-top: 2em;
     color: #d3d3d3;
-    font-weight: 700;
+}
+
+
+.btn-2 {
+    position: relative;
+    display: flex;
+    justify-content: center;
 }
 
 .btn {
-    position: relative;
-    left: 9em;
-    margin-top: 2em;
-    width: 7em;
-    height: 3em;
+    min-width: 7em;
+    min-height: 3em;
     border: none;
     border-radius: 10px;
     text-decoration: none;
     transition: .2s;
-    font-weight: 700;
     font-family: 'Roboto Condensed';
-    font-size: 1em;
 }
+
+
 
 .btn:hover {
     cursor: pointer;
-    background-color: orchid;
+    background-color: #881EE4;
     font-weight: 700;
     color: #fff;
 }
@@ -186,7 +198,7 @@ footer {
     justify-content: center;
     text-align: center;
     background-color: #fff;
-    min-height: 200px;
+    min-height: 116px;
     max-width: 100%;
 }
 
@@ -194,7 +206,7 @@ footer {
     position: relative;
     width: 250px;
     text-align: center;
-    top: 5.5em;
+    top: 2.7em;
     height: 25px;
     font-family: 'Roboto Condensed';
     font-weight: 400;
@@ -206,21 +218,14 @@ footer {
 
 @media only screen and (max-width: 1428px) {
 
-        body {
-            background-size: auto auto;
-            background-position: 50% 25%;
-        }
-
-
 .grid {
     gap: 5%;
-    column-gap: 20em;
+    /* column-gap: 20em; */
 }
 
-footer {
-    position: relative;
-    bottom: -35em;
-    height: 100px;
+.shop-item {
+    min-width: 25px;
+    margin: 0 auto;
 }
 
 img {
@@ -232,8 +237,53 @@ img:hover {
     transform: none;
 }
 
+footer {
+    position: relative;
+    bottom: -50em;
+    height: 116px;
+}
+
 footer p {
     position: relative;
     bottom: 1em;
+
+}
+
+@media only screen and (max-width: 1082px) {
+
+
+.logo {
+    top: .8em;
+}
+
+.list {
+    display: none;
+}
+
+.srch {
+    display: none;
+}
+
+.toggle {
+    position: relative;
+    float: right;
+    bottom: 1em;
+    margin-right: 2em;
+    width: 60px;
+    height: 60px;
+    background: url(https://i.ibb.co/HrfVRcx/menu.png);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: center;
+    cursor: pointer;
+}
+
+.toggle.active {
+    background: url(https://i.ibb.co/rt3HybH/close.png);
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+}
+
 
 }
