@@ -12,9 +12,11 @@
 
 
 body {
-    background-color: #222831;
+    background-color: #eee;
     height: 100vh;
     overflow-x: hidden;
+    font-family: 'Roboto Condensed';
+    color: #881EE4;
 }
 
 /* ////////////////////// NAVIGATION  ////////////////////// */
@@ -29,14 +31,46 @@ body {
     background-color: #85E21F ;
 }
 
-
-.nav ul li:hover {
-    -moz-transform: scale(-1, -1);
-        -webkit-transform: scale(-1, -1);
-        -o-transform: scale(-1, -1);
-        -ms-transform: scale(-1, -1);
-        transform: scale(-1, -1);
+.list {
+    
 }
+
+.srch {
+    position: relative;
+    left: 3em;
+    bottom: .5em;
+}
+
+.srch input {
+    padding: 6px;
+    width: 250px;
+    border: 1px solid lightgray;
+}
+
+.srch input:focus {
+    outline: none;
+}
+
+.srch i {
+    position: relative;
+    top: 5px;
+    font-size: 24px;
+    transition: .3s;
+}
+
+.srch i:hover {
+    color: #d3d3d3;
+    background-color: #881EE4;
+    border-radius: 5px;
+}
+
+.srch-btn {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
 
 .logo {
     position: inherit;
@@ -72,46 +106,22 @@ body {
 
 li p {
     position: relative;
-    color: #d3d3d3;
     text-align: center;
     margin-bottom: 2em;
 }
 
-.srch {
+.cart {
     position: relative;
     float: right;
-    right: 5em;
-    bottom: .5em;
+    right: 3em;
+    bottom: 2.3em;
 }
 
-.srch input {
-    padding: 6px;
-    width: 250px;
-    border: 1px solid lightgray;
+.cart-btn {
+    width: 200px;
+    height: 28px;
 }
 
-.srch input:focus {
-    outline: none;
-}
-
-.srch i {
-    position: relative;
-    top: 5px;
-    font-size: 24px;
-    transition: .3s;
-}
-
-.srch i:hover {
-    color: #d3d3d3;
-    background-color: #222831;
-    border-radius: 5px;
-}
-
-.srch-btn {
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-}
 
 
 
@@ -140,6 +150,8 @@ li p {
 img {
     transition: .2s;
     z-index: 1;
+    border: solid 5px #881EE4;
+    border-radius: 15px;
  }
  
  img:hover {
@@ -148,15 +160,16 @@ img {
  }
 
 .grid-item-title {
+    text-align: center;
     padding-top: 1em;
-    font-size: calc(var12px*1.22);
+    font-size: clamp(2px, 24px, 32px);
 }
  
 .item-price {
     position: relative;
     bottom: 1.5em;
     text-align: center;
-    color: #d3d3d3;
+    font-size: clamp(2px, 24px, 32px);
 }
 
 
@@ -174,6 +187,7 @@ img {
     text-decoration: none;
     transition: .2s;
     font-family: 'Roboto Condensed';
+    background-color:#85E21F;
 }
 
 
