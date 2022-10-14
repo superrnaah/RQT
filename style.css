@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap');
 
+
+
 /* ////////////////////// UNIVERSAL MODS ////////////////////// */
 
 * {
@@ -12,8 +14,7 @@
 
 
 body {
-    background-color: #eee;
-    height: 100vh;
+    background-color: #000;
     overflow-x: hidden;
     font-family: 'Roboto Condensed';
     color: #881EE4;
@@ -26,25 +27,26 @@ body {
     width: 100%;
     margin: 0 auto;
     position: relative;
-    height: 116px;
+    height: 130px;
     font-family: 'Lemon';
-    background-color: #85E21F ;
+    background-color: #000;
+    border-bottom: solid .5px lightgray;
 }
 
-.list {
-    
-}
 
 .srch {
     position: relative;
     left: 3em;
     bottom: .5em;
+    width: 350px;
+    
 }
 
 .srch input {
     padding: 6px;
     width: 250px;
     border: 1px solid lightgray;
+    
 }
 
 .srch input:focus {
@@ -56,11 +58,12 @@ body {
     top: 5px;
     font-size: 24px;
     transition: .3s;
+    color: #85E21F;
+    padding-right: 10px;
 }
 
 .srch i:hover {
-    color: #d3d3d3;
-    background-color: #881EE4;
+    transform: scale(1.3);
     border-radius: 5px;
 }
 
@@ -77,8 +80,8 @@ body {
     margin: 0 auto;
     top: .2em;
     font-family: 'Lemon';
-    color: #F75F1C;
-    font-size: 2.5em;
+    color: #fff;
+    font-size: 3em;
     cursor: pointer;
     max-width: 120px;
 }
@@ -86,7 +89,6 @@ body {
 
 .list {
     position: relative;
-    font-size: .9em;
     top: 1.5em;
     max-width: 350px;
     max-height: 25px;
@@ -97,61 +99,68 @@ body {
     gap: 2em;
     list-style: none;
     letter-spacing: 3px;
+    transition: all;
 }
 
-.list:hover {
-    cursor: pointer;
-}
-
-
-li p {
-    position: relative;
-    text-align: center;
-    margin-bottom: 2em;
+.list li:hover {
+    transform: scale(1.1);
+        cursor: pointer;
 }
 
 .cart {
     position: relative;
     float: right;
     right: 3em;
-    bottom: 2.3em;
-}
+    bottom: 2.6em;
+    }
 
 .cart-btn {
-    width: 200px;
-    height: 28px;
+    width: 50px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    color: #85E21F;
 }
 
+.cart-btn:hover {
+    cursor: pointer;
+}
+
+.cart span {
+    font-size: 3em;
+}
 
 
 
 /* ////////////////////// PRODUCT-GRID ////////////////////// */
 
+.hero {
+    /* display: flex; */
+    /* justify-content: center; */
+
+}
 
 .grid {
-    justify-content: center;
     margin-top: 5em;
     margin-bottom: 5em;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20em;
-    padding-top: 25px;
-    padding-left: 4em;
-    padding-right: 6em;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 800px));
+    row-gap: 3em;
+    column-gap: .5em;
+    grid-row: auto;
     list-style: none;
-    max-height: 300em;
-    max-width: 400em;
+    place-items: center;
 }
 
-.shop-item {
-    min-width: 20em;
-}
+
 
 img {
     transition: .2s;
-    z-index: 1;
-    border: solid 5px #881EE4;
+    border: solid 5px #fff;
     border-radius: 15px;
+    width: clamp(300px, 391px, 400px);
+    height: clamp(300px, 391px, 400px);
+
  }
  
  img:hover {
@@ -160,16 +169,18 @@ img {
  }
 
 .grid-item-title {
-    text-align: center;
     padding-top: 1em;
     font-size: clamp(2px, 24px, 32px);
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 700;
 }
  
 .item-price {
-    position: relative;
-    bottom: 1.5em;
     text-align: center;
     font-size: clamp(2px, 24px, 32px);
+    margin-bottom: 10px;
+    font-weight: 100;
 }
 
 
@@ -187,7 +198,7 @@ img {
     text-decoration: none;
     transition: .2s;
     font-family: 'Roboto Condensed';
-    background-color:#85E21F;
+    background-color:#fff;
 }
 
 
@@ -211,9 +222,10 @@ footer {
     display: flex;
     justify-content: center;
     text-align: center;
-    background-color: #fff;
+    background-color: #000;
     min-height: 116px;
     max-width: 100%;
+    border-top: 1px solid #fff;
 }
 
 .foot {
@@ -232,20 +244,9 @@ footer {
 
 @media only screen and (max-width: 1428px) {
 
-.grid {
-    gap: 5%;
-    /* column-gap: 20em; */
-}
 
-.shop-item {
-    min-width: 25px;
-    margin: 0 auto;
-}
 
-img {
-    width: 300px;
-    height: 300px;
-}
+
 
 img:hover {
     transform: none;
